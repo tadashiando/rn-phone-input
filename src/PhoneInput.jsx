@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 import data from './Countries';
+import Flags from '../lib/resources/flags'
 
 export default class IntlPhoneInput extends React.Component {
   constructor(props) {
@@ -216,6 +217,10 @@ export default class IntlPhoneInput extends React.Component {
 
     );
   }
+}
+
+export function getFlag(iso2) {
+  return Flags.get(iso2);
 }
 
 IntlPhoneInput.propTypes = {
